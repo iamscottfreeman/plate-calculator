@@ -1,5 +1,6 @@
 import './globals.css';
 import { fonts } from './fonts';
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata = {
   title: 'Plate Calculator',
@@ -9,7 +10,10 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en'>
-      <body className={fonts.body.className}>{children}</body>
+      <body className={fonts.body.className}>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
