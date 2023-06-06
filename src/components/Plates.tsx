@@ -17,7 +17,7 @@ const Plates = ({ plates, collar, remainder }: Props) => {
     const color = DEFAULT_PLATES.find((plate) => plate.weight === weight)?.color;
     const size = weight >= 15 ? 'h-40' : weight >= 10 ? 'h-32' : 'h-20';
     return (
-      <div className={`flex items-center justify-center ${color} w-7 ${size} mx-1 shadow shadow-black`}>
+      <div className={`flex items-center justify-center ${color} w-7 ${size} mx-1 shadow shadow-black rounded`}>
         <div className={`w-7 flex-shrink-0 -rotate-90 text-center ${fonts.header.className}`}>{weight}</div>
       </div>
     );
@@ -34,7 +34,7 @@ const Plates = ({ plates, collar, remainder }: Props) => {
         ))}
         {collar && (
           <div className='h-40'>
-            <div className='flex items-center justify-center bg-gray-400 w-5 h-14 relative top-12 mt-1 shadow shadow-black' />
+            <div className='flex items-center justify-center bg-gray-400 w-5 h-14 relative top-12 mt-1 shadow shadow-black rounded' />
           </div>
         )}
         <div className='h-40'>

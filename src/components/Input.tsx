@@ -11,7 +11,7 @@ const Input = ({ weight, setWeight }: Props) => {
     <div className='flex flex-col'>
       <div className={`uppercase text-left text-xl ${fonts.header.className}`}>Weight</div>
       <div
-        className='bg-gray-800 text-white border-2 border-red-600'
+        className='bg-gray-800 text-white border-2 border-red-600 rounded'
         onClick={() => document.getElementById('input')?.focus()}
       >
         <input
