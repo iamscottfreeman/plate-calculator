@@ -1,6 +1,7 @@
+import React from 'react';
+
 import DEFAULT_PLATES from '@/app/DEFAULT_PLATES';
 import { fonts } from '@/app/fonts';
-import React from 'react';
 
 type Props = {
   plates: number[] | undefined;

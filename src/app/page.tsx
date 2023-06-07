@@ -1,12 +1,13 @@
 'use client';
+import { useEffect, useState } from 'react';
 
+import DEFAULT_PLATES from './DEFAULT_PLATES';
 import Bar from '@/components/Bar';
 import Header from '@/components/Header';
 import Input from '@/components/Input';
 import Plates from '@/components/Plates';
-import { useEffect, useState } from 'react';
-import DEFAULT_PLATES from './DEFAULT_PLATES';
-import { fonts } from './fonts';
+import Footer from '@/components/Footer';
+import MoreWeight from '@/components/MoreWeight';
 
 export default function Home() {
   const [barWeight, setBarWeight] = useState(20);
@@ -53,14 +54,10 @@ export default function Home() {
       <Bar barWeight={barWeight} collars={collars} setBarWeight={setBarWeight} setCollars={setCollars} />
       {weight && (
         <div className='mt-10'>
-          {isEnoughWeight() ? (
-            <div className={`${fonts.header.className} uppercase text-xl`}>Add more weight!</div>
-          ) : (
-            <Plates plates={plates} collar={collars} remainder={remainder} />
-          )}
+          {isEnoughWeight() ? <MoreWeight /> : <Plates plates={plates} collar={collars} remainder={remainder} />}
         </div>
       )}
-      <div className='fixed bottom-0 p-2 text-xs'>&copy; 2023 Scott Freeman</div>
+      <Footer />
     </main>
   );
 }

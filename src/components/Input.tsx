@@ -1,5 +1,6 @@
-import { fonts } from '@/app/fonts';
 import React, { Dispatch, SetStateAction } from 'react';
+
+import { fonts } from '@/app/fonts';
 
 type Props = {
   weight: string;

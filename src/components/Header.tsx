@@ -1,6 +1,6 @@
-import { fonts } from '@/app/fonts';
 import React from 'react';
-import Icon from './Icon';
+
+import { fonts } from '@/app/fonts';
 
 const Header = () => {
   return (
