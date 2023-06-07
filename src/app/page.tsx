@@ -37,14 +37,15 @@ export default function Home() {
   };
 
   const calcWeight = () => {
-    let sideWeight = (Number(weight) - barWeight) / 2;
+    let sideWeight = (parseFloat(weight) - barWeight) / 2;
+    console.log(sideWeight);
     if (isNaN(sideWeight)) return;
     if (collars) sideWeight = sideWeight - 2.5;
     calcPlates(sideWeight);
   };
 
   const isEnoughWeight = () => {
-    return Number(weight) < barWeight + (collars ? 5 : 0);
+    return parseFloat(weight) < barWeight + (collars ? 5 : 0);
   };
 
   return (

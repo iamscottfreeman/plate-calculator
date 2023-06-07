@@ -21,7 +21,8 @@ const Input = ({ weight, setWeight }: Props) => {
           value={weight}
           onChange={(e) => {
             const weight = e.currentTarget.value;
-            if (weight.length < 4) setWeight(weight);
+            console.log(parseFloat(weight));
+            if (parseFloat(weight) < 9999 || weight == '') setWeight(weight);
           }}
           className={`bg-gray-800 text-white p-4 text-xl active:border-0 outline-0 w-32 text-right pr-0 ${fonts.header.className}`}
         />
