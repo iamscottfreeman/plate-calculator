@@ -35,7 +35,7 @@ const Plates = ({ plates, collar, remainder }: Props) => {
         ))}
         {collar && (
           <div className='h-40'>
-            <div className='flex items-center justify-center bg-gray-400 w-5 h-14 relative top-12 mt-1 shadow shadow-black rounded' />
+            <div className='flex items-center justify-center bg-gray-400 w-5 h-14 relative top-12 mr-1 mt-1 shadow shadow-black rounded' />
           </div>
         )}
         <div className='h-40'>

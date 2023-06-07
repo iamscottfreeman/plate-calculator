@@ -9,7 +9,7 @@ type Props = {
 
 const Input = ({ weight, setWeight }: Props) => {
   return (
-    <div className='flex flex-col'>
+    <div className='flex flex-col mb-5'>
       <div className={`uppercase text-left text-xl ${fonts.header.className}`}>Weight</div>
       <div
         className='bg-gray-800 text-white border-2 border-red-600 rounded cursor-text'
