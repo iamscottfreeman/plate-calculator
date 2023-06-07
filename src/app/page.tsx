@@ -38,7 +38,6 @@ export default function Home() {
 
   const calcWeight = () => {
     let sideWeight = (parseFloat(weight) - barWeight) / 2;
-    console.log(sideWeight);
     if (isNaN(sideWeight)) return;
     if (collars) sideWeight = sideWeight - 2.5;
     calcPlates(sideWeight);
