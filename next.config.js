@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const withPWA = require('@imbios/next-pwa')({
-  dest: 'public'
+  dest: 'public',
+  buildExcludes: [/app-build-manifest\.json$/]
 });
 
 const nextConfig = {};
