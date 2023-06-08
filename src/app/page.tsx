@@ -54,7 +54,6 @@ export default function Home() {
       <Bar barWeight={barWeight} collars={collars} setBarWeight={setBarWeight} setCollars={setCollars} />
       {weight &&
         (isEnoughWeight() ? <MoreWeight /> : <Plates plates={plates} collar={collars} remainder={remainder} />)}
-      <Footer />
     </main>
   );
 }
