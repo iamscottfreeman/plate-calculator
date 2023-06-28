@@ -6,7 +6,6 @@ import Bar from '@/components/Bar';
 import Header from '@/components/Header';
 import Input from '@/components/Input';
 import Plates from '@/components/Plates';
-import Footer from '@/components/Footer';
 import MoreWeight from '@/components/MoreWeight';
 
 export default function Home() {
@@ -50,7 +49,7 @@ export default function Home() {
   return (
     <main className='flex flex-col items-center pt-5 px-5'>
       <Header />
-      <Input weight={weight} setWeight={setWeight} />
+      <Input weight={weight} barWeight={barWeight + (collars ? 5 : 0)} setWeight={setWeight} />
       <Bar barWeight={barWeight} collars={collars} setBarWeight={setBarWeight} setCollars={setCollars} />
       {weight &&
         (isEnoughWeight() ? <MoreWeight /> : <Plates plates={plates} collar={collars} remainder={remainder} />)}
