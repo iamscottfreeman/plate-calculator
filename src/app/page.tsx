@@ -47,7 +47,7 @@ export default function Home() {
   };
 
   return (
-    <main className='flex flex-col items-center pt-5 px-5'>
+    <main className='flex flex-col items-center pt-5 px-5 min-w-[300px]'>
       <Header />
       <Input weight={weight} barWeight={barWeight + (collars ? 5 : 0)} setWeight={setWeight} />
       <Bar barWeight={barWeight} collars={collars} setBarWeight={setBarWeight} setCollars={setCollars} />
