@@ -1,4 +1,4 @@
-export default [
+const DEFAULT_PLATES = [
   { weight: 25, count: 8, color: 'bg-red-600' },
   { weight: 20, count: 1, color: 'bg-blue-600' },
   { weight: 15, count: 1, color: 'bg-yellow-500' },
@@ -9,3 +9,5 @@ export default [
   { weight: 0.5, count: 1, color: 'bg-slate-400' },
   { weight: 0.25, count: 1, color: 'bg-slate-400' }
 ];
+
+export default DEFAULT_PLATES;

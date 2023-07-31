@@ -36,8 +36,8 @@ const Bar = ({ barWeight, collars, setBarWeight, setCollars }: Props) => {
     <div className='mb-10'>
       <div className={`uppercase text-xl pl-2 ${fonts.header.className}`}>Bar</div>
       <div className='grid grid-cols-3 gap-1'>
-        {DEFAULT_BARS.map((weight) => (
-          <BarWeight weight={weight} />
+        {DEFAULT_BARS.map((weight, index) => (
+          <BarWeight weight={weight} key={index} />
         ))}
         <label
           className={`flex flex-col justify-center items-center basis-0 px-4 h-16 bg-gray-800 text-white border-2 rounded cursor-pointer select-none ${
