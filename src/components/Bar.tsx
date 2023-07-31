@@ -1,6 +1,7 @@
 import React, { Dispatch, SetStateAction } from 'react';
 
 import { fonts } from '@/app/fonts';
+import DEFAULT_BARS from '@/app/DEFAULT_BARS';
 
 type Props = {
   barWeight: number;
@@ -9,38 +10,34 @@ type Props = {
   setCollars: Dispatch<SetStateAction<boolean>>;
 };
 
-const barWeights = [7.5, 12.5, 15, 20, 25];
-
 type BarWeightProps = {
   weight: number;
-  barWeight: number;
-  setBarWeight: any;
 };
 
-const BarWeight = ({ weight, barWeight, setBarWeight }: BarWeightProps) => (
-  <label
-    className={`flex justify-center items-center flex-grow flex-shrink basis-0 px-4 h-16 bg-gray-800 text-white border-2 rounded cursor-pointer select-none ${
-      weight === barWeight ? 'border-red-600 bg-gray-700' : 'text-gray-300 border-gray-700'
-    }`}
-  >
-    <input
-      type='radio'
-      name='barWeight'
-      className='hidden'
-      checked={weight === barWeight}
-      onChange={() => setBarWeight(weight)}
-    />
-    {weight}kg
-  </label>
-);
-
 const Bar = ({ barWeight, collars, setBarWeight, setCollars }: Props) => {
+  const BarWeight = ({ weight }: BarWeightProps) => (
+    <label
+      className={`flex justify-center items-center flex-grow flex-shrink basis-0 px-4 h-16 bg-gray-800 text-white border-2 rounded cursor-pointer select-none ${
+        weight === barWeight ? 'border-red-600 bg-gray-700' : 'text-gray-300 border-gray-700'
+      }`}
+    >
+      <input
+        type='radio'
+        name='barWeight'
+        className='hidden'
+        checked={weight === barWeight}
+        onChange={() => setBarWeight(weight)}
+      />
+      {weight}kg
+    </label>
+  );
+
   return (
     <div className='mb-10'>
       <div className={`uppercase text-xl pl-2 ${fonts.header.className}`}>Bar</div>
       <div className='grid grid-cols-3 gap-1'>
-        {barWeights.map((weight) => (
-          <BarWeight weight={weight} barWeight={barWeight} setBarWeight={setBarWeight} />
+        {DEFAULT_BARS.map((weight) => (
+          <BarWeight weight={weight} />
         ))}
         <label
           className={`flex flex-col justify-center items-center basis-0 px-4 h-16 bg-gray-800 text-white border-2 rounded cursor-pointer select-none ${
