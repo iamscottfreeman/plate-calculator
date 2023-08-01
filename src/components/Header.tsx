@@ -33,8 +33,8 @@ const Header = () => {
           </svg>
         </button>
       </div>
-      <Drawer open={isOpen} onClose={toggleDrawer} direction='right' className='bg-gray-600'>
-        <div className='bg-gray-900 min-h-screen border-l-4 border-red-600 p-4 w-64 h-screen overflow-x-auto'>
+      <Drawer open={isOpen} onClose={toggleDrawer} direction='right'>
+        <div className='bg-gray-900 border-l-4 border-red-600 h-full p-4 overflow-x-auto'>
           <div className={`${fonts.header.className} uppercase text-xl mt-2 mb-2`}>Hello!</div>
           <p className='mb-4'>The only difficult thing at the gym should be moving the weights, not adding them up.</p>
           <p className='mb-4'>
@@ -47,21 +47,31 @@ const Header = () => {
           </p>
           <p className='mb-4'>The weight you need to load on each side of the bar is then displayed.</p>
           <p className='mb-4'>Use the plus and minus buttons to change the weight in 2.5kg increments.</p>
-
+          <div className={`${fonts.header.className} uppercase text-xl mt-8 mb-2`}>Add to your phone</div>
+          <p className='mb-4'>
+            If you're using an iPhone or an Android, you can install the <strong>Plate Calculator</strong> on your phone
+            and access it easily, even without Internet access.
+          </p>
+          <p className='mb-4'>
+            On an iPhone, tap the <em>Share</em> icon on the bottom of the screen, and tap <em>Add to Home Screen</em>.
+          </p>
+          <p className='mb-4'>
+            On an Android, tap the <em>three dots</em> on the top right of the screen, and tap{' '}
+            <em>Add to Home Screen</em>.
+          </p>
           <div className={`${fonts.header.className} uppercase text-xl mt-8 mb-2`}>About</div>
           <p className='mb-4'>
             Created by Scott Freeman,
             <br />
             and free for all to use.
           </p>
-          <p className='mb-4'>
+          <p className='mb-20 md:mb-4'>
             Comments and feedback welcome! Please email{' '}
-            <Link href='mailto:plates@scottfreeman.net' className='underline text-blue-300'>
-              plates@scottfreeman.net
+            <Link href='mailto:email@scottfreeman.net' className='underline text-blue-300'>
+              email@scottfreeman.net
             </Link>
           </p>
-
-          <div className='absolute top-2 right-2'>
+          <div className='absolute top-2 right-2 bg-gray-900 border border-none rounded-full w-9 h-9'>
             <button onClick={toggleDrawer}>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
