@@ -49,8 +49,8 @@ const Header = () => {
           <p className='mb-4'>Use the plus and minus buttons to change the weight in 2.5kg increments.</p>
           <div className={`${fonts.header.className} uppercase text-xl mt-8 mb-2`}>Add to your phone</div>
           <p className='mb-4'>
-            If you're using an iPhone or an Android, you can install the <strong>Plate Calculator</strong> on your phone
-            and access it easily, even without Internet access.
+            If you&apos;re using an iPhone or an Android, you can install the <strong>Plate Calculator</strong> on your
+            phone and access it easily, even without Internet access.
           </p>
           <p className='mb-4'>
             On an iPhone, tap the <em>Share</em> icon on the bottom of the screen, and tap <em>Add to Home Screen</em>.
