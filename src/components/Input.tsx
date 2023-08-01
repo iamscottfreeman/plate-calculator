@@ -16,7 +16,7 @@ const Input = ({ weight, barWeight, setWeight }: Props) => {
       </div>
       <div className='flex items-center'>
         <span
-          className='text-3xl cursor-pointer bg-red-700 w-10 h-10 rounded-full text-center align-middle mr-4 select-none'
+          className='text-3xl cursor-pointer bg-red-700 w-10 h-10 rounded-full text-center align-middle mr-4 select-none leading-10'
           onClick={() => {
             let newWeight = weight !== '' ? parseFloat(weight) : barWeight;
             if (newWeight) {
@@ -29,7 +29,7 @@ const Input = ({ weight, barWeight, setWeight }: Props) => {
           &ndash;
         </span>
         <div
-          className='bg-gray-800 text-white border-2 border-red-600 rounded cursor-text flex items-center'
+          className='bg-gray-800 text-white border-2 border-red-600 rounded-lg cursor-text flex items-center leading-10'
           onClick={() => document.getElementById('input')?.focus()}
         >
           <input
@@ -40,7 +40,7 @@ const Input = ({ weight, barWeight, setWeight }: Props) => {
               const weight = e.currentTarget.value;
               if (parseFloat(weight) < 9999 || weight == '') setWeight(weight);
             }}
-            className={`bg-gray-800 text-white py-4 text-xl active:border-0 outline-0 w-32 text-right ${fonts.header.className}`}
+            className={`bg-gray-800 text-white py-4 text-xl active:border-0 outline-0 w-32 rounded-xl text-right ${fonts.header.className}`}
           />
           <span className={`px-2 uppercase text-sm ${fonts.header.className}`}>kg</span>
         </div>
