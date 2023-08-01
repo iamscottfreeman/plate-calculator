@@ -42,7 +42,7 @@ const Header = () => {
           </p>
           <div className={`${fonts.header.className} uppercase text-xl mt-8 mb-2`}>How to use</div>
           <p className='mb-4'>
-            Enter the weight you want to load, and optionally select the weight of the bar and if you're using
+            Enter the weight you want to load, and optionally select the weight of the bar and if you&apos;re using
             calibrated collars.
           </p>
           <p className='mb-4'>The weight you need to load on each side of the bar is then displayed.</p>
