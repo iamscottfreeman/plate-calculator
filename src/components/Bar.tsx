@@ -33,8 +33,8 @@ const Bar = ({ barWeight, collars, setBarWeight, setCollars }: Props) => {
   );
 
   return (
-    <div className='mb-10'>
-      <div className={`uppercase text-xl pl-2 ${fonts.header.className}`}>Bar</div>
+    <div className='mt-4'>
+      <div className={`uppercase text-xl pl-2 ${fonts.header.className}`}>Bar Weight</div>
       <div className='grid grid-cols-3 gap-1'>
         {DEFAULT_BARS.map((weight, index) => (
           <BarWeight weight={weight} key={index} />

@@ -50,9 +50,13 @@ export default function Home() {
     <main className='flex flex-col items-center pt-5 px-5 min-w-[300px]'>
       <Header />
       <Input weight={weight} barWeight={barWeight + (collars ? 5 : 0)} setWeight={setWeight} />
+      {weight && (
+        <div className={remainder ? 'h-56' : 'h-44'}>
+          {weight &&
+            (isEnoughWeight() ? <MoreWeight /> : <Plates plates={plates} collar={collars} remainder={remainder} />)}
+        </div>
+      )}
       <Bar barWeight={barWeight} collars={collars} setBarWeight={setBarWeight} setCollars={setCollars} />
-      {weight &&
-        (isEnoughWeight() ? <MoreWeight /> : <Plates plates={plates} collar={collars} remainder={remainder} />)}
     </main>
   );
 }

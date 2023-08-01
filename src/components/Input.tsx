@@ -11,7 +11,9 @@ type Props = {
 const Input = ({ weight, barWeight, setWeight }: Props) => {
   return (
     <div className='flex flex-col mb-5'>
-      <div className={`uppercase text-left text-xl ml-14 ${fonts.header.className}`}>Weight</div>
+      <div className={`uppercase text-left text-xl ml-14 ${fonts.header.className}`}>
+        <label htmlFor='input'>Weight</label>
+      </div>
       <div className='flex items-center'>
         <span
           className='text-3xl cursor-pointer bg-red-700 w-10 h-10 rounded-full text-center align-middle mr-4 select-none'
