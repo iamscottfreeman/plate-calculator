@@ -16,7 +16,7 @@ const Header = () => {
     <div className='mb-5'>
       <h1 className={`text-5xl leading-10 text-center uppercase ${fonts.header.className}`}>Plate Calculator</h1>
       <div className='absolute top-2 right-2'>
-        <button onClick={toggleDrawer}>
+        <button onClick={toggleDrawer} aria-label='About Plate Calculator'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
             fill='none'
@@ -72,7 +72,7 @@ const Header = () => {
             </Link>
           </p>
           <div className='absolute top-2 right-2 bg-gray-900 border border-none rounded-full w-9 h-9'>
-            <button onClick={toggleDrawer}>
+            <button onClick={toggleDrawer} aria-label='Close about Plate Calculator'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 fill='none'
