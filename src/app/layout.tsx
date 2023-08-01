@@ -12,6 +12,11 @@ export const metadata: Metadata = {
   description: APP_DESC,
   applicationName: APP_NAME,
   openGraph: {
+    url: 'https://plates.scottfreeman.net',
+    type: 'website',
+    title: APP_NAME,
+    description: APP_DESC,
+    siteName: APP_NAME,
     images: [
       {
         url: 'https://plates.scottfreeman.net/icons/512.png',
