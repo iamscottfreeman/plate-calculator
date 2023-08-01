@@ -51,7 +51,7 @@ export default function Home() {
       <Header />
       <Input weight={weight} barWeight={barWeight + (collars ? 5 : 0)} setWeight={setWeight} />
       {weight && (
-        <div className={remainder ? 'h-56' : 'h-44'}>
+        <div className={remainder > 0 ? 'h-56' : 'h-44'}>
           {weight &&
             (isEnoughWeight() ? <MoreWeight /> : <Plates plates={plates} collar={collars} remainder={remainder} />)}
         </div>
